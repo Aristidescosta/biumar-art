@@ -1,0 +1,6 @@
+
+echo 'Check for linting and run tests before commiting'
+yarn run check ||
+(echo 'Liting errors failed. Please fix then before commiting.')
+
+echo 'Done'
