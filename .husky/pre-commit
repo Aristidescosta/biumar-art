@@ -1,6 +1,5 @@
+echo 'Verifique se há erros de linting e execute testes antes de confirmar...'
+yarn run check:fix ||
+(echo 'Erros de linting ou testes falharam. Por favor, corrija antes de confirmar.' && exit 1)
 
-echo 'Check for linting and run tests before commiting'
-yarn run check ||
-(echo 'Liting errors failed. Please fix then before commiting.')
-
-echo 'Done'
+echo 'Feito'
