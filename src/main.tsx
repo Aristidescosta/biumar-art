@@ -2,6 +2,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
 import { StrictMode } from 'react';
 
+import './shared/styles/global.css';
+
 import { App } from './App';
 
 const router = createBrowserRouter([
