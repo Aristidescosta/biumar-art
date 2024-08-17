@@ -1,31 +1,54 @@
+import { ChakraProvider } from '@chakra-ui/react';
+import { BaseLayoutPage } from '@/shared/layouts';
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
 import { StrictMode } from 'react';
 
-import './shared/styles/global.css';
-
 import { App } from './App';
-import { ChakraProvider } from '@chakra-ui/react';
+
+import '@/shared/styles/global.css';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
-    children: [
-      {
-        path: '/contact',
-        element: <h1>Contacto</h1>,
-      },
-      {
-        path: '/our-services',
-        element: <h1>Nossos serviços</h1>,
-      },
-      {
-        path: '/about-us',
-        element: <h1>Sobre nós</h1>,
-      },
-    ],
-    errorElement: <h1>Página de erro</h1>,
+    element: (
+      <BaseLayoutPage.Root>
+        <BaseLayoutPage.Header />
+        <App />
+        <BaseLayoutPage.Footer />
+      </BaseLayoutPage.Root>
+    ),
+  },
+  {
+    path: '/contact',
+    element: (
+      <BaseLayoutPage.Root>
+        <BaseLayoutPage.Header />
+        <h1>Contactos</h1>
+        <BaseLayoutPage.Footer />
+      </BaseLayoutPage.Root>
+    ),
+  },
+  {
+    path: '/our-services',
+    element: (
+      <BaseLayoutPage.Root>
+        <BaseLayoutPage.Header />
+        <h1>Nossos serviços</h1>
+        <BaseLayoutPage.Footer />
+      </BaseLayoutPage.Root>
+    ),
+  },
+  {
+    path: '/about-us',
+    element: (
+      <BaseLayoutPage.Root>
+        <BaseLayoutPage.Header />
+        <h1>Sobre nós</h1>
+        <BaseLayoutPage.Footer />
+      </BaseLayoutPage.Root>
+    ),
   },
 ]);
 
