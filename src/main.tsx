@@ -5,6 +5,7 @@ import { StrictMode } from 'react';
 import './shared/styles/global.css';
 
 import { App } from './App';
+import { ChakraProvider } from '@chakra-ui/react';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ChakraProvider>
+      <RouterProvider router={router} />
+    </ChakraProvider>
   </StrictMode>
 );
