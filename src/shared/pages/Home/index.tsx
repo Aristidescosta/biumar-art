@@ -1,9 +1,12 @@
-import { Box, Button, Center, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { ImagesSection, PromotionalVideo } from '@/shared/components';
+import { Plane } from '@/shared/components/Plane';
+import { Box, Button, Center, Flex, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
+import { BannerDepoiment } from './BannerDepoiment';
 
 export const Home: React.FC = () => {
   return (
-    <Box as="main">
+    <Box as="main" p={4} pos={'relative'}>
       <Flex flexDir={['column', 'row']}>
         <Flex flex={1} flexDir={'column'} gap={12}>
           <Heading className="text-sky-500" size={'md'} as={'h2'}>
@@ -25,8 +28,13 @@ export const Home: React.FC = () => {
           </Button>
         </Flex>
         <Flex flex={1}>
-          <Image src="logo.png" alt="Logo da Biumar Art" />
+          <Box className="space-y-4 p-4">
+            <PromotionalVideo />
+            <ImagesSection />
+          </Box>
         </Flex>
+        <BannerDepoiment />
+        <Plane toLeft/>
       </Flex>
 
       <Center>

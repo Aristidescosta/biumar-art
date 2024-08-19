@@ -78,3 +78,16 @@ export const ROUTES_FOOTER = [
     ]
   },
 ];
+
+export const TESTIMONIALS = [
+  {
+    author: 'Lisa Duarte',
+    message: 'Nunca pensei que a minha filha pudesse se divertir tanto, amei os serviços prestados pela Biumar Art!',
+    image: 'lisa.png'
+  },
+  {
+    author: 'Paulo Nogueira',
+    message: 'Eu amei o conceito de se divertir da Biumar Art, tanto que entrei na brincadeira com o meu filho Jason, pintei-me todo, recomendo!',
+    image: 'paulo.png'
+  },
+];
