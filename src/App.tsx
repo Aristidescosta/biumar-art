@@ -3,7 +3,7 @@ import { BaseLayoutPage } from '@/shared/layouts';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import { Home } from '@/shared/pages';
+import { ErrorPage, Home } from '@/shared/pages';
 
 export const App = () => {
   const router = createBrowserRouter([
@@ -13,6 +13,13 @@ export const App = () => {
         <BaseLayoutPage.Root>
           <BaseLayoutPage.Header />
           <Home />
+          <BaseLayoutPage.Footer />
+        </BaseLayoutPage.Root>
+      ),
+      errorElement: (
+        <BaseLayoutPage.Root>
+          <BaseLayoutPage.Header />
+          <ErrorPage />
           <BaseLayoutPage.Footer />
         </BaseLayoutPage.Root>
       ),
@@ -26,6 +33,13 @@ export const App = () => {
           <BaseLayoutPage.Footer />
         </BaseLayoutPage.Root>
       ),
+      errorElement: (
+        <BaseLayoutPage.Root>
+          <BaseLayoutPage.Header />
+          <ErrorPage />
+          <BaseLayoutPage.Footer />
+        </BaseLayoutPage.Root>
+      ),
     },
     {
       path: '/our-services',
@@ -36,6 +50,13 @@ export const App = () => {
           <BaseLayoutPage.Footer />
         </BaseLayoutPage.Root>
       ),
+      errorElement: (
+        <BaseLayoutPage.Root>
+          <BaseLayoutPage.Header />
+          <ErrorPage />
+          <BaseLayoutPage.Footer />
+        </BaseLayoutPage.Root>
+      ),
     },
     {
       path: '/about-us',
@@ -43,6 +64,13 @@ export const App = () => {
         <BaseLayoutPage.Root>
           <BaseLayoutPage.Header />
           <h1>Sobre nós</h1>
+          <BaseLayoutPage.Footer />
+        </BaseLayoutPage.Root>
+      ),
+      errorElement: (
+        <BaseLayoutPage.Root>
+          <BaseLayoutPage.Header />
+          <ErrorPage />
           <BaseLayoutPage.Footer />
         </BaseLayoutPage.Root>
       ),
