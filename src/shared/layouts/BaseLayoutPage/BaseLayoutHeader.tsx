@@ -31,11 +31,11 @@ export const BaseLayoutHeader: React.FC = () => {
   return (
     <>
       <Box as="header" mb={12}>
-        <Flex w={'full'} className="items-center justify-between">
+        <Flex w={'full'} className="items-center justify-between p-1">
           <Link to={'/'}>
             <Image src="logo.png" boxSize={['80px', '150px']} alt="Logo da Biumar Art" />
           </Link>
-          <InputGroup w={'30%'} display={['none', null]}>
+          <InputGroup w={'30%'} display={['none', 'flex']}>
             <InputLeftElement pointerEvents="none">
               <BiSearch color="#757575" size={24} />
             </InputLeftElement>
@@ -47,7 +47,7 @@ export const BaseLayoutHeader: React.FC = () => {
             />
           </InputGroup>
 
-          <Flex display={['none', 'flex']}>
+          <Flex display={['none', 'none', 'flex']}>
             <Options />
           </Flex>
           <IconButton
@@ -57,10 +57,11 @@ export const BaseLayoutHeader: React.FC = () => {
             fontSize="20px"
             icon={<GiHamburgerMenu />}
             onClick={onOpen}
+            display={['flex', 'flex', 'none']}
           />
         </Flex>
         <Flex
-          display={['none', null]}
+          display={['none', 'none', 'flex']}
           className="items-center justify-center"
           fontWeight={500}
           gap={8}
