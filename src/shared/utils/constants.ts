@@ -91,3 +91,22 @@ export const TESTIMONIALS = [
     image: 'paulo.png'
   },
 ];
+
+export const FAQs = [
+  {
+    question: 'Como eu poderei vos contactar?',
+    response: 'Estamos localizados na Gamek, rua FFF, perto do XXXX. Temos também disponível os seguintes terminais telefônicos: 0000-000-000/ 0000-0000-000-',
+  },
+  {
+    question: 'Qual é a vossa política de reembolso?',
+    response: 'Estamos localizados na Gamek, rua FFF, perto do XXXX. Temos também disponível os seguintes terminais telefônicos: 0000-000-000/ 0000-0000-000-',
+  },
+  {
+    question: 'Vocês também vendem brinquedos para crianças?',
+    response: 'Estamos localizados na Gamek, rua FFF, perto do XXXX. Temos também disponível os seguintes terminais telefônicos: 0000-000-000/ 0000-0000-000-',
+  },
+  {
+    question: 'Vocês aceitam pagamento via TPA?',
+    response: 'Estamos localizados na Gamek, rua FFF, perto do XXXX. Temos também disponível os seguintes terminais telefônicos: 0000-000-000/ 0000-0000-000-',
+  },
+];
