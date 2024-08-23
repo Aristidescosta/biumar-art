@@ -3,7 +3,7 @@ import { BaseLayoutPage } from '@/shared/layouts';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import { Home } from '@/shared/pages';
+import { Contact, Home } from '@/shared/pages';
 
 export const App = () => {
   const router = createBrowserRouter([
@@ -22,7 +22,7 @@ export const App = () => {
       element: (
         <BaseLayoutPage.Root>
           <BaseLayoutPage.Header />
-          <h1>Contactos</h1>
+          <Contact/>
           <BaseLayoutPage.Footer />
         </BaseLayoutPage.Root>
       ),
